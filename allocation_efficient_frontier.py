@@ -26,7 +26,8 @@ from scipy.optimize import minimize
 ###############################
 #       Load Data Frames      #
 ###############################
-# Assuming we have the data frames stored. 
+# Assuming we have the data frames stored.
+# These are series of Adj. Close Values 5 years back, each
 Apple = pd.read_csv('/Target file path', index_col='Date', parse_dates=True)
 Cisco = pd.read_csv('/Target file path', index_col='Date', parse_dates=True)
 Ibm = pd.read_csv('/Target file path', index_col='Date', parse_dates=True)
