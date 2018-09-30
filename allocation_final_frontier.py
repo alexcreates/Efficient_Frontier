@@ -26,10 +26,11 @@ from scipy.optimize import minimize
 ###############################
 #       Load Data Frames      #
 ###############################
-Apple = pd.read_csv('/Users/mac/Desktop/PyFi/Historical_Stock_Data/Quandl/Stocks/AAPL_CLOSE', index_col='Date', parse_dates=True)
-Cisco = pd.read_csv('/Users/mac/Desktop/PyFi/Historical_Stock_Data/Quandl/Stocks/CISCO_CLOSE', index_col='Date', parse_dates=True)
-Ibm = pd.read_csv('/Users/mac/Desktop/PyFi/Historical_Stock_Data/Quandl/Stocks/IBM_CLOSE', index_col='Date', parse_dates=True)
-Amazon = pd.read_csv('/Users/mac/Desktop/PyFi/Historical_Stock_Data/Quandl/Stocks/AMZN_CLOSE', index_col='Date', parse_dates=True)
+# Assuming we have the data frames stored. 
+Apple = pd.read_csv('/Target file path', index_col='Date', parse_dates=True)
+Cisco = pd.read_csv('/Target file path', index_col='Date', parse_dates=True)
+Ibm = pd.read_csv('/Target file path', index_col='Date', parse_dates=True)
+Amazon = pd.read_csv('/Target file path', index_col='Date', parse_dates=True)
 
 
 stocks = pd.concat([Apple, Cisco, Ibm, Amazon], axis=1)
@@ -197,22 +198,17 @@ plt.scatter(max_sharpe_volatility, max_sharpe_return, c='red', s=50, edgecolors=
 plt.plot(frontier_volatility, frontier_y,'g--', linewidth=1)
 
 fig = plt
-fig.savefig('/Users/mac/Desktop/PyFi/Historical_Stock_Data/Quandl/Stocks/testGraphSave1.png')
+# save the plot as a .png file 
+fig.savefig('/Target file path.png')
 
-
-
-
-fig.show()
 
 
 
 ####################################
 ####################################
-#           Read Outs              #
+#           Tear Sheet             #
 ####################################
 ####################################
-print '________ALLO'
-
 print 'Percent Change: ' + str(percent_change)
 print 'Average Percent Change: ' + str(average_pct_change)
 print 'Logarithmic Return: ' + str(logarithmic_return)
@@ -224,3 +220,4 @@ print 'Optimized Return: ' + str(optimized_RVS[0])
 print 'Optimized Allocation Guess: ' + str(init_guess)
 print 'Initial Allocation Guess: ' + str(init_guess)
 print 'Optimized Return, Volatility, Sharpe Ratio: ' + str(optimized_RVS)
+print 'Correlation Result: ' + str(df_correlation_result)
