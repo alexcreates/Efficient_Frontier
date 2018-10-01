@@ -2,7 +2,7 @@ The monte carlo simulation runs many trials on many possible
 market conditions that follows a "drift" and "shock" model. 
 A "drift" is a normalized oscillation within reasonable bounds 
 of random average movement around each datapoint in the dataframe 
-provided for the simulation which has somewhat similar behavior 
+provided for the simulation. Which has somewhat of a similar behavior 
 with mean-reversion.
 A "shock" is a calculation that sends the price randomly up or down 
 to simulate market conditions such as bad news or good news. 
